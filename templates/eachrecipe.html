@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {% block content %}
+
+<html>
+<head>
+            
+</head>
+<body>
+
+    <!--recipe_id that allows the site to identify what recipe should be displayed-->
+    <div action="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class ="col s12">
+           <div class="section s12">
+               
+               <!--page title-->
+               <div class="container seperator">
+                   <h1 class="page-title">{{recipe.recipe_name}}</h1>
+                   <div class="divider orange accent-4"></div>
+                </div>
+                
+                <!--recipe information displayed ina container -->
+                <div class="row">       
+                    <div class="text-container-eachrecipe col s12 l6">
+                            <div class="col s12"><b>Recipe submitted by: </b>{{recipe.recipe_author}}</div>
+                            <div class="col s12 m6"><b>Prep and cook time:</b>{{recipe.cooking_time}}</div>
+                            <div class="col s12 m6"><b>Calories per serving:</b> {{recipe.calories}}</div>
+                            <div class="col s6"><b>Is the recipe dairy free?</b> {{recipe.is_dairy_free}}</div>
+                            <div class="col s6"><b>Is the recipe gluten free?</b> {{recipe.is_gluten_free}}</div>
+                            <div class="col s12"><b>Ingredients required:</b><br> {{recipe.ingredients}}</div>
+                            <div class="col s12"><b>Cooking instructions:<br></b>{{recipe.cooking_instructions}}</div> 
+                        <div class="eachrecipe-buttons col s12">
+                            
+                            <!--edit recipe button-->
+                            <div class=" col s6 l3">
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }} " class="waves-effect waves-light btn orange darken-2">Edit
+                                    <i class="material-icons right">edit</i></a>
+                            </div>
+                            
+                            <!--blank div to help with spacing of buttons-->
+                            <div class=" col s6 l3"></div>
+                           
+                            <!--delete recipe button-->
+                            <div class=" col s6 l3">            
+                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }} " class="waves-effect waves-light btn orange darken-2"> Delete
+                                    <i class="material-icons right">delete</i></a>
+                            </div>
+                            
+                            <!--blank div to help with spacing of buttons-->
+                            <div class=" col s6 l3"></div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        
+                        <!--image of recipe-->
+                        <div class="image_recipe">
+                            <img class="responsive-img z-depth-3" src= {{recipe.recipe_image}}>
+                        </div>
+                        
+                        <!--counter button that allows users to press if they have made the recipe-->
+                        <div class="like-button col s6 offset-s2">
+                        <a href="{{ url_for('upvotes', recipe_id=recipe._id) }} " class="waves-effect waves-light btn orange darken-2"><b>{{recipe.upvotes}}</b> people Used this recipie
+                            <i class="material-icons right">person</i></a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+     </div>
+</body>
+</html>
+ {% endblock %}
+ 

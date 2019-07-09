@@ -1,0 +1,114 @@
+{% extends 'base.html' %} {% block content %}
+
+<html>
+<head>
+
+</head>
+<body>
+    
+    <!--page title-->
+    <div class="container seperator">
+        <H1 class="page-title">Add Recipe</H1>
+        <div class="divider orange accent-4"></div>
+    </div>
+    
+    <!--form that has set headers so that the user inputs the correct information-->
+    <div class="row">
+        <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12">
+            <div class="row">
+                    <div class="row col s12 l6">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">assignment</i>
+                        <input id="recipe_name" name="recipe_name" type="text">
+                        <label for="icon_prefix">Recipe Name</label>
+                    </div>
+                </div>
+                
+                <div class="row col s12 l6">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="recipe_author" name="recipe_author" type="text">
+                        <label for="icon_prefix">Recipe Author</label>
+                    </div>
+                </div>            
+                
+                <div class="row col s12 l6">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">access_time</i>
+                        <select id="cooking_time" name="cooking_time">
+                            <option value=""disabled selected>Select cooking time</option>
+                            <option value="<15 minutes">Can be made in 15 minutes</option>
+                            <option value="16-30 minutes">Up to 30 minutes</option>
+                            <option value="31-45 minutes">Up to 45 minutes</option>
+                            <option value="46-60 minutes">Up to 1 hour</option>
+                            <option value=">60 minutes">Over 1 hour</option>
+                        </select>
+                        <label>Total cooking Time</label>
+                    </div>
+                </div>
+                
+                <div class="row col s12 l6">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">pie_chart</i>
+                        <input id="calories" name="calories" type="number">
+                        <label for="icon_prefix">Calories</label>
+                    </div>
+                </div>
+         
+                <div class="row col s12">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">shopping_cart</i>
+                        <input id="ingredients" name="ingredients" type="text">
+                        <label for="icon_prefix">Ingredients</label>
+                    </div>
+                </div>
+                
+                <div class="row col s12">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">format_list_numbered</i>
+                        <input id="cooking_instructions" name="cooking_instructions" type="text">
+                        <label for="icon_prefix">Cooking Instructions</label>
+                    </div>
+                </div>
+                
+                <div class="row col s12">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">camera_alt</i>
+                        <input id="recipe_image" name="recipe_image" type="text">
+                        <label for="icon_prefix">Recipe Image</label>
+                    </div>
+                </div>     
+                
+                <div class="row col s12 l6">
+                    <div class="checkbox">
+                        <input id="is_dairy_free" value='Yes' name="is_dairy_free" class="filled_in" type="checkbox"/>
+                        <label for="is_dairy_free">Is the recipe dairy free?</label>
+                        
+                        <!--hidden input that allows the site to display 'No' instead of leaving blank-->
+                        <input id='is_dairy_free_hidden' type='hidden' value='No' name='is_dairy_free'>
+                    </div>
+                </div>
+                
+                <div class="row col s12 l6">
+                    <div class="checkbox">
+                        <input id="is_gluten_free" value='Yes' name="is_gluten_free" class="filled_in" type="checkbox"/>
+                        <label for="is_gluten_free">Is the recipe gluten free?</label>
+                        
+                        <!--hidden input that allows the site to display 'No' instead of leaving blank-->
+                        <input id='is_gluten_free_hidden' type='hidden' value='No' name='is_gluten_free'>
+                    </div>
+                </div>
+                
+                <!--button that submits the recipe to the database-->
+                <div class="row col s12">
+                    <button class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Add Recipe
+                        <i class="material-icons right">playlist_add</i>
+                     </button>
+                </div>
+        
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

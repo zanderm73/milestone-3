@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block content %}
+
+<html>
+<head>
+
+</head>
+<body>
+  
+  <!--page title and subtitle-->
+  <div class="container seperator">
+    <h1 class='page-title'>DFGF Recipes</h1>
+    <h4 class='page-subtitle'>All Recipes</h4>
+    
+    <!--filter dropdown button-->
+    <div class="button-drop">
+      <a class='dropdown-button btn orange accent-4' data-beloworigin="true" href='#' data-activates='dropdown1'>Filter Recipes</a>
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="{{ url_for('get_tasks')}}">All Recipes</a></li>
+          <li class="divider orange accent-4" tabindex="-1"></li>
+          <li><a href="{{ url_for('dairy_free')}}">Dairy Free</a></li>
+          <li class="divider orange accent-4" tabindex="-1"></li>
+          <li><a href="{{ url_for('gluten_free')}}">Gluten Free</a></li>
+          <li class="divider orange accent-4" tabindex="-1"></li>
+          <li><a href="{{ url_for('dairy_gluten_free')}}">Dairy & Gluten Free</a></li>
+        </ul>
+      </div>
+    <div class="divider orange accent-4"></div>
+  </div>
+        <div class="row">
+          
+            <!--recipe card that displays image and title of recipe taken from mongoDB database dfgf_recipes-->
+            {% for recipe in dfgf_recipes %}
+            <div class="col s12 m6 l4">
+                <div class="card hoverable">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src= {{recipe.recipe_image}}>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{recipe.recipe_name}}<i class="material-icons right">more_vert</i></span>
+                    
+                    <!--link to the full recipe page unique to the recipe that is selected-->
+                    <p><a href="{{url_for('view_recipe', recipe_id=recipe._id)}}" class="orange-text text-accent-4">View full recipe and cooking instructions</a></p>
+                  </div>
+                  
+                  <!-- displays brief details of the recipe on the card-->
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><b>{{recipe.recipe_name}}</b><i class="material-icons right">close</i></span>
+                          
+                          <b>Recipe author:</b> {{recipe.recipe_author}}<br>
+                          <b>Estimated cooking time:</b> {{recipe.cooking_time}}<br>
+                          <b>Calories per serving:</b> {{recipe.calories}}<br>
+                          <b>Is the recipe dairy free?</b> {{recipe.is_dairy_free}}<br>
+                          <b>Is the recipe gluten free?</b> {{recipe.is_gluten_free}}
+                          
+                  </div>
+                </div>
+            </div>    
+          {% endfor %}
+    
+        
+    </div>
+        
+        
+</body>
+</html>
+
+{% endblock %}

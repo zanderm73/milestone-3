@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <!--links for fonts used, materialize CSS files and my own CSS file-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700|Patrick+Hand|Playball|Playfair+Display:400i,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href= "{{url_for('static', filename='css/sstyle.css')}}" type="text/css" />
+ 
+</head>
+
+<body>
+    <header>
+        
+        <!--navigation bar for desktop-->
+        <nav>
+            <div class="nav-wrapper teal darken-2">
+                <a href="{{url_for('get_tasks')}}" class="brand-logo">DFGF Foods</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">New Recipe</a></li>
+                    <li><a href="{{url_for('about_us')}}">About Us</a></li>
+                </ul>
+                
+                <!-- side nav bar for mobile devices-->
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{url_for('get_tasks')}}">Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">New Recipe</a></li>
+                    <li><a href="{{url_for('about_us')}}">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!--where other templates using Django will be added into the page-->
+    {% block content %}{% endblock %}
+    
+    <!--footer including links around site and Instagram-->
+    <footer class="page-footer teal darken-2">
+          <div class="container ">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">DFGF Ideology </h5>
+                <p class="grey-text text-lighten-4">Dairy Free Gluten Free (DFGF) Foods provides easy recipes to fit your 
+                dietary needs. Every recipe on DFGF foods is either dairy free, gluten free or DFGF.<br>
+                As we try to build the DFGF community we would love your help by adding any great recipes you may have?</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Site Map</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_tasks')}}">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{url_for('add_recipe')}}">Add Recipe</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{url_for('about_us')}}">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/dfgffoods/">Instagram</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            <a class="orange-text text-accent-4 right" href="#!">by DandelionDesigns</a>
+            </div>
+          </div>
+        </footer>
+    </div>
+    
+    <!--jquery links to enable functions on the site-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+            $('select').material_select();
+            $(".button-collapse").sideNav(); 
+        });
+    </script>
+</body> 
+</html>

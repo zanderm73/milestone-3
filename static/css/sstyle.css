@@ -1,0 +1,101 @@
+
+/*---Page-positioning---*/
+.task_header {
+    margin-top: 5px;
+    background-color: blue;
+}
+
+.seperator{
+    padding-bottom: 10px;
+}
+
+.divider{
+    margin-top: 10px;
+}
+
+.recipe_grid {
+    padding-right: 100px;
+    margin-right: 50px;
+}
+
+.button-drop{
+    text-align:right; 
+    
+}
+
+        /*---Eachrecipe---*/
+
+.text-container-eachrecipe{
+    padding-left: 0px;
+}
+
+.eachrecipe-buttons{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.like-button{
+    margin-top: 5px;
+}
+
+
+
+/*---Fonts & colors for application---*/
+        /*---Standard-font---all-pages---*/
+body {
+    font-family: 'Hind', sans-serif;
+    font-size: larger;
+}
+
+        /*---Navbar---*/
+nav{
+   font-family: 'Abril Fatface', cursive; 
+}
+
+
+        /*---Header-title---all-pages--*/
+.page-title{
+    font-family: 'Playfair Display', serif;
+    padding-left: 11.25px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: teal;
+}
+
+.page-subtitle{
+    font-family: 'Playfair Display', serif;
+    padding-left: 11.25px;
+    text-align: center;
+    margin-top: 5px;
+    color: #ff6d00;
+}
+
+
+        /*---Header-filter---all-pages--*/
+.dropdown-content{
+    color: red;
+}
+
+        /*---Recipes-page---*/
+.card-title{
+    font-family: 'Playfair Display', serif;
+}
+
+.each-recipe-title{
+  font-family: 'Playfair Display', serif;
+}
+
+        /*---Eachrecipe-page---*/
+
+
+
+        /*---Addrecipe-page---*/
+.card-title{
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+        /*----Footer---*/
+.white-text{
+    font-family: 'Abril Fatface', cursive;
+}
