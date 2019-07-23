@@ -14,7 +14,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_tasks')
 def get_tasks():
-    return render_template("recipes.html", dfgf_recipes=mongo.db.dfgf_recipes.find())
+    return render_template('recipes.html', dfgf_recipes=mongo.db.dfgf_recipes.find())
     
 # renders add_recipe page    
 @app.route('/add_recipe')
