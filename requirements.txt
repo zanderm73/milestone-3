@@ -1,6 +1,8 @@
+Django==2.0.2
+dnspython==1.16.0
+Flask==1.1.1
+Flask-PyMongo==2.3.0
 Click==7.0
-Flask==1.0.2
-Flask-PyMongo==2.2.0
 itsdangerous==1.1.0
 Jinja2==2.10
 MarkupSafe==1.1.0
