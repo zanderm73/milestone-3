@@ -5,7 +5,8 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-
+app.config["MONGO_DBNAME"] = 'milestone_3'
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 mongo = PyMongo(app)
 
@@ -55,7 +56,8 @@ def update_recipe(recipe_id):
         'cooking_instructions': request.form.get('cooking_instructions'),
         'is_dairy_free':request.form.get('is_dairy_free'),
         'is_gluten_free':request.form.get('is_gluten_free'),
-        'recipe_author':request.form.get('recipe_author')
+        'recipe_author':request.form.get('recipe_author'),
+        'recipe_image':request.form.get('recipe_image')
     })
     return redirect(url_for('get_tasks'))
 
@@ -95,4 +97,4 @@ def dairy_gluten_free():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=(os.environ.get('PORT')),
-            debug=True)
+            debug=False)
