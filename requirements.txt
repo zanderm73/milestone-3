@@ -9,7 +9,11 @@ jsonpatch==1.16
 jsonpointer==1.10
 jsonschema==2.6.0
 MarkupSafe==1.1.0
+packaging==20.1
+py==1.8.1
 pymongo==3.7.2
+pyparsing==2.4.6
+pytest==5.3.5
 pytz==2019.2
 virtualenv==16.2.0
 virtualenvwrapper==4.8.4
