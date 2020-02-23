@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/zanderm73/milestone-3.svg?branch=master)](https://travis-ci.org/zanderm73/milestone-3)
 # DFGF Recipes - Milestone 3 Project
 
 The purpose of the the project is too create a recipe database that caters to people that have intolerances to dairy or gluten. The database can have information added, edited and deleted by the user allowing the project to have a more diverse range of recipes. The project is also interactive in the sense that a person can upvote a recipe if they used it and enjoyed it, which in turn allows others to see that it is a popular recipe. 
