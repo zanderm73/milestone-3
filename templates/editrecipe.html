@@ -63,17 +63,13 @@
                         <label for="icon_prefix">Cooking Instructions</label>
                     </div>
                 </div>
-
-
                 <div class="row col s12">
                     <div class="input-field col s12">
                         <i class="material-icons prefix"></i>
-                        <textarea name="recipe_image" id="recipe_image" class="materialize-textarea">{{recipe.recipe_image}}</textarea>
+                        <textarea name="recipe_image" id="recipe_image"  type="hidden" class="materialize-textarea">{{recipe.recipe_image}}</textarea>
                         <label for="icon_prefix">Recipe Image</label>
                     </div>
                 </div>
-
-                
                 <div class="row col s12 l6">
                     <div class="checkbox">
                         <input id="is_dairy_free" name="is_dairy_free" class="filled_in" type="checkbox"/>
