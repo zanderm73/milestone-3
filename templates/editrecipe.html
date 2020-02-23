@@ -65,11 +65,11 @@
                 </div>
                 <div class="row col s12">
                     <div class="input-field col s12">
-                        <i class="material-icons prefix"></i>
-                        <textarea name="recipe_image" id="recipe_image"  type="hidden" class="materialize-textarea">{{recipe.recipe_image}}</textarea>
-                        <label for="icon_prefix">Recipe Image</label>
+                        <i class="material-icons prefix">camera_alt</i>
+                        <input id="recipe_image" name="recipe_image" type="text" class="validate" value="{{recipe.recipe_image}}">
+                        <label for="icon_prefix">Recipe Image (links only, do not change if you do not have another image to upload)</label>
                     </div>
-                </div>
+                </div>  
                 <div class="row col s12 l6">
                     <div class="checkbox">
                         <input id="is_dairy_free" name="is_dairy_free" class="filled_in" type="checkbox"/>
