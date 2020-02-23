@@ -1,8 +1,6 @@
 {% extends 'base.html' %} {% block content %}
-
 <html>
 <head>
-
 </head>
 <body>
     
@@ -23,7 +21,6 @@
                         <label for="icon_prefix">Recipe Name</label>
                     </div>
                 </div>
-                
                 <div class="row col s12 l6">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">create</i>
@@ -31,7 +28,6 @@
                         <label for="icon_prefix">Recipe Author</label>
                     </div>
                 </div>            
-                
                 <div class="row col s12 l6">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">access_time</i>
@@ -46,7 +42,6 @@
                         <label>Total cooking Time</label>
                     </div>
                 </div>
-                
                 <div class="row col s12 l6">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">pie_chart</i>
@@ -54,7 +49,6 @@
                         <label for="icon_prefix">Calories</label>
                     </div>
                 </div>
-         
                 <div class="row col s12">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">shopping_cart</i>
@@ -62,7 +56,6 @@
                         <label for="icon_prefix">Ingredients</label>
                     </div>
                 </div>
-                
                 <div class="row col s12">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">format_list_numbered</i>
@@ -70,23 +63,21 @@
                         <label for="icon_prefix">Cooking Instructions</label>
                     </div>
                 </div>
-                
                 <div class="row col s12 l6">
                     <div class="checkbox">
                         <input id="is_dairy_free" name="is_dairy_free" class="filled_in" type="checkbox"/>
-                        
-                        
-                        <!--hidden input that allows the site to display 'No' instead of leaving blank--><label for="is_dairy_free">Is the recipe dairy free?</label>
+                         
+                        <!--hidden input that allows the site to display 'No' instead of leaving blank-->
+                        <label for="is_dairy_free">Is the recipe dairy free?</label>
                         <input id='is_dairy_free_hidden' type='hidden' value='No' name='is_dairy_free'>
                     </div>
                 </div>
-                
                 <div class="row col s12 l6">
                     <div class="checkbox">
-                        <input id="is_gluten_free" name="is_gluten_free" class="filled_in" type="checkbox"/>
+                        <input id="is_gluten_free" name="is_gluten_free" class="filled_in" type="checkbox"/> 
                         
-                        
-                        <!--hidden input that allows the site to display 'No' instead of leaving blank--><label for="is_gluten_free">Is the recipe gluten free?</label>
+                        <!--hidden input that allows the site to display 'No' instead of leaving blank-->
+                        <label for="is_gluten_free">Is the recipe gluten free?</label>
                         <input id='is_gluten_free_hidden' type='hidden' value='No' name='is_gluten_free'>
                     </div>
                 </div>
@@ -97,11 +88,9 @@
                         <i class="material-icons right">send</i>
                      </button>
                 </div>
-        
             </div>
         </form>
     </div>
 </body>
 </html>
-
 {% endblock %}

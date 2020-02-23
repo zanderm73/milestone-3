@@ -1,8 +1,6 @@
 {% extends 'base.html' %} {% block content %}
-
 <html>
 <head>
-
 </head>
 <body>
   
@@ -48,24 +46,19 @@
                           
                           <!-- displays brief details of the recipe on the card-->
                           <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><b>{{recipe.recipe_name}}</b><i class="material-icons right">close</i></span>
-                                  
+                            <span class="card-title grey-text text-darken-4"><b>{{recipe.recipe_name}}</b><i class="material-icons right">close</i></span>                               
                                   <b>Recipe author:</b> {{recipe.recipe_author}}<br>
                                   <b>Estimated cooking time:</b> {{recipe.cooking_time}}<br>
                                   <b>Calories per serving:</b> {{recipe.calories}}<br>
                                   <b>Is the recipe dairy free?</b> {{recipe.is_dairy_free}}<br>
-                                  <b>Is the recipe gluten free?</b> {{recipe.is_gluten_free}}
-                                  
+                                  <b>Is the recipe gluten free?</b> {{recipe.is_gluten_free}}                               
                           </div>
                         </div>
                     </div>   
                 {% endif %}
             {% endif %}
         {% endfor %}
-    </div>
-        
-        
+    </div>   
 </body>
 </html>
-
 {% endblock %}
