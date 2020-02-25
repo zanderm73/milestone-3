@@ -79,8 +79,9 @@ For this singles page application there was a number of programming languages, f
     1. Selecting all links and making sure all pages load correctly and there is not any dead links
 
 ### Automated Testing
-- All HTML code was tested using the W3C HTML tool validator ( https://validator.w3.org). The validator did not recognise the Django template extender which resulted in it flagging up multiple errors
+- All HTML code was tested using the W3C HTML tool validator ( https://validator.w3.org). The validator did not recognise the template extender which resulted in it flagging up multiple errors
 - All CSS code was tested using the W3C CSS tool validator (https://jigsaw.w3.org/css-validator/). No errors were found
+- Unittesting was done using the file test.py, the tests that were used were taken from [here](https://damyanon.net/post/flask-series-testing/)
 
 ## Issues Faced
 
