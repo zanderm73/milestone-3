@@ -17,6 +17,7 @@ The project has been designed with a mobile first approach but it is fully respo
 - User 4 has tried a few of the recipes on DFGF previously and enjoyed them, so much so they have clicked that they have used the recipes on their unique pages. The user now wants to add their own recipe to the site. When they open the DFGF homepage on their laptop they proceed to click on new recipe in the navigation bar where they are directed to a page with a form where they can add their recipe, image and their name so that they get the credit for uploading their recipe.
 - User 5 is scrolling through the homepage recipes and using the card reveal function to quickly glance at the calories per serving of the recipes as they are trying to reduce their calorie intake. They notice that the scrambled  tofu is only 240 calories per serving, the user then proceeds to the full recipe page to get the ingredients and cooking instructions.
 
+
 ## Features
 
 ### Existing Features
@@ -34,6 +35,7 @@ The project has been designed with a mobile first approach but it is fully respo
  - Additional filters - As the project grows the types of filters would increase as well, for example a filter to display the recipes with the highest amount of votes on the ‘I made this’ button first
  - Instruction videos - this would provide the user with a more interactive experience where they could make the recipe while following the instructional video
 
+
 ## Technologies Used
 For this singles page application there was a number of programming languages, frameworks and libraries that were used. These are stated below with an explanation as to why they were used;
 - HTML - The markup language is used as the building blocks allowing text to be displayed on the project
@@ -47,6 +49,7 @@ For this singles page application there was a number of programming languages, f
 - mongoDB - this non relational database is used to store the data that can be read, edited and deleted by the user (https://www.mongodb.com/)
 - PyMongo - this is used as a driver to allow the Python based project to use mongoDB (https://api.mongodb.com/python/current/)
 - BSON - this is used as mongoDB stores data in a binary code JSON format (http://bsonspec.org/)
+
 
 ## Testing
 ### Manual Testing
@@ -82,6 +85,8 @@ For this singles page application there was a number of programming languages, f
 - All HTML code was tested using the W3C HTML tool validator ( https://validator.w3.org). The validator did not recognise the template extender which resulted in it flagging up multiple errors
 - All CSS code was tested using the W3C CSS tool validator (https://jigsaw.w3.org/css-validator/). No errors were found
 - Unittesting was done using the file test.py, the tests that were used were taken from [here](https://damyanon.net/post/flask-series-testing/)
+- Travis CI was used so to ensure that all of the automated tests throughout the site are passing on the lastest version pushed to GitHub. At the top of this README.md file it states that all tests are indeed passing
+
 
 ## Issues Faced
 
@@ -91,9 +96,10 @@ While creating the data centric project there were several issues that were enco
 - While creating this project the platform CLoud9 that was used to write the code was acquired by Amazon therefore the project had to be migrated over to AWS Cloud. This caused many problems for this project in particular for instance I had to create a new Git repository as I could not access the initial one, I have since found a solution on how to do this on other projects. The requirements.txt file included a lot of packages that I did not download and this was preventing the project being deployed to Heroku, after researching the issue seems that the command being used stated all package in AWS Cloud and not just the local packages that I installed. This was solved with help from the users on Slack.
 
 ## Development and Deployment
-- The project was developed using Cloud9 and then AWS IDE Cloud as Cloud9 was disabled. 
-- Github  was used as a code repository to ensure any changes were saved, https://github.com/zanderm73/milestone-3. The entire project can be cloned form the Github repository and can be then be run locally. For a cloned site to work the same as this project ensure that that the MongoDB database that is created has the same headings and the Mongo_URI is changed to the new database that you create.
-- The project has been deployed using Heroku where the config vars have been set to ‘IP - 0.0.0.0’ and ‘PORT - 5000’. Heroku has been linked to GitHub and it has been setup so that Heroku deploys the master branch of the GitHub repository.
+- The project was developed using Cloud9 and then AWS IDE Cloud and GitPod as Cloud9 was disabled. 
+- Github  was used as a code repository to ensure any changes were saved, https://github.com/zanderm73/milestone-3.
+- The project was deployed using Heroku as a host which is also capable of storing environmental variables. The deployment variables have been set to ‘IP - 0.0.0.0’ and ‘PORT - 5000’.
+- To run this project on another machine, an IDE such as Gitpod with PIP, Git and Python3 installed would be required. The project can be cloned from GitHub using the HTTPS link above. All other packages that are required for the project to run locally have been provided and can be installed by typing ‘pip3 -r requirements.txt’ into the command line. An env.py file needs to be created in the IDE to store variables such as the database name and password. The database password in this project is reffered to by using 'MONGO_URI'.
 
 
 ## Credits
@@ -101,7 +107,7 @@ While creating the data centric project there were several issues that were enco
 
 ### Content
 - At the time of deployment the recipes instructions, ingredients and images were all taken from either Great British Chefs (https://www.greatbritishchefs.com) and Tesco (https://realfood.tesco.com/recipes.html).
-- As the project encourages users to add their own recipes and images there will be content sourced user that isn’t referenced
+- As the project encourages users to add their own recipes and images there will be content sourced by the user that isn’t referenced
 
 ### Acknowledgements
 - Stack Overflow, and Slack were useful when problems were encountered during the project development
