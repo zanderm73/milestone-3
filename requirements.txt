@@ -10,7 +10,7 @@ jsonpointer==1.10
 jsonschema==2.6.0
 MarkupSafe==1.1.0
 packaging==20.1
-py==1.8.1
+py==1.10.0
 pymongo==3.7.2
 pyparsing==2.4.6
 pytest==5.3.5
